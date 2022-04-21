@@ -276,8 +276,8 @@ body {
 .menu__button {
   display: none;
   font-size: 30px;
-  color: #f16d7f;
-  border: 1px solid #f16d7f;
+  color: #ffffff;
+  background-color: #f16d7f;
 }
 
 .menu__link {
@@ -308,17 +308,20 @@ body {
     margin: 50px 0px 0px 0px;
   }
   .menu__subtitle {
-    font-size: 30px;
+    font-size: 40px;
     margin: 0px 0px 40px 0px;
   }
   .menu__link {
-    font-size: 26px;
+    font-size: 34px;
     margin: 0px 0px 35px 0px;
     padding: 0px 0px 0px 0px;
   }
 }
 
 @media (max-width: 767.98px) {
+  .menu__content {
+    margin: 50px 0px 0px 0px;
+  }
   .menu__button {
     display: -webkit-box;
     display: -ms-flexbox;

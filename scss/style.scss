@@ -163,8 +163,8 @@ body {
    &__button {
       display: none;
       font-size: 30px;
-      color: $site-color;
-      border: 1px solid $site-color;
+      color: #ffffff;
+      background-color: $site-color;
    }
 
    &__link {
@@ -200,12 +200,12 @@ body {
       }
 
       &__subtitle {
-         font-size: 30px;
+         font-size: 40px;
          margin: 0px 0px 40px 0px;
       }
 
       &__link {
-         font-size: 26px;
+         font-size: 34px;
          margin: 0px 0px 35px 0px;
          padding: 0px 0px 0px 0px;
       }
@@ -214,6 +214,10 @@ body {
 
 @media (max-width: 767.98px) {
    .menu {
+      &__content {
+         margin: 50px 0px 0px 0px;
+      }
+
       &__button {
          display: flex;
          margin: 0px 0px 70px 0px;
