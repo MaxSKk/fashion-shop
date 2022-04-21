@@ -43,6 +43,18 @@ body {
    min-height: 100vh;
 }
 
+.button {
+   min-height: 47px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.3s ease 0s;
+
+   &:hover {
+      transition: all 0.5s ease 0s;
+   }
+}
+
 /************************************HEADER************************************************/
 
 .header {
@@ -77,6 +89,22 @@ body {
    &__link img {
       min-height: 26px;
    }
+
+   &__burger {
+      cursor: pointer;
+   }
+
+   &__menu {
+      padding: 16px 16px 50px 34px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .header {
+      &__menu {
+         padding: 25px 25px 50px 34px;
+      }
+   }
 }
 
 @media (max-width: 767.98px) {
@@ -91,6 +119,117 @@ body {
    }
 }
 
+/************************************MENU************************************************/
+
+.menu {
+   position: absolute;
+   z-index: 50;
+   top: 75px;
+   right: -200%;
+   background: #ffffff;
+   min-width: 232px;
+   height: calc(100vh - 75px);
+   overflow-y: auto;
+   transition: all 1s ease 0s;
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__closer {
+      align-self: flex-end;
+      cursor: pointer;
+   }
+
+   &__content {
+      margin: 9px 0px 0px 0px;
+   }
+
+   &__title {
+      font-weight: 700;
+   }
+
+   &__item {
+      margin: 20px 0px 0px 0px;
+      border-bottom: 1px solid #6f6e6e;
+   }
+
+   &__subtitle {
+      color: $site-color;
+      margin: 0px 0px 12px 0px;
+   }
+
+   &__button {
+      display: none;
+      font-size: 30px;
+      color: $site-color;
+      border: 1px solid $site-color;
+   }
+
+   &__link {
+      display: block;
+      color: #6f6e6e;
+      margin: 0px 0px 12px 0px;
+      padding: 0px 0px 0px 20px;
+   }
+
+   &__link:hover {
+      color: $site-color;
+   }
+}
+
+@media (max-width: 991.98px) {
+   body.lock {
+      overflow: hidden;
+   }
+
+   .menu {
+      min-width: 100%;
+
+      &__title {
+         display: none;
+      }
+
+      &__linkbox {
+         text-align: center;
+      }
+
+      &__item {
+         margin: 50px 0px 0px 0px;
+      }
+
+      &__subtitle {
+         font-size: 30px;
+         margin: 0px 0px 40px 0px;
+      }
+
+      &__link {
+         font-size: 26px;
+         margin: 0px 0px 35px 0px;
+         padding: 0px 0px 0px 0px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .menu {
+      &__button {
+         display: flex;
+         margin: 0px 0px 70px 0px;
+      }
+   }
+}
+
+.menu.active {
+   right: 0;
+   transition: all 0.6s ease-out 0s;
+}
+
+.menu::-webkit-scrollbar {
+   width: 0;
+}
+
 /************************************MAIN************************************************/
 
 .main {
@@ -103,6 +242,14 @@ body {
    &__offers {
       margin: 0px 0px 96px 0px;
    }
+
+   &__products {
+      margin: 0px 0px 95px 0px;
+   }
+
+   &__feature {
+      padding: 100px 0px;
+   }
 }
 
 @media (max-width: 991.98px) {
@@ -113,6 +260,14 @@ body {
 
       &__offers {
          margin: 0px 0px 150px 0px;
+      }
+
+      &__products {
+         margin: 0px 0px 65px 0px;
+      }
+
+      &__feature {
+         padding: 48px 0px 64px 0px;
       }
    }
 }
@@ -125,6 +280,10 @@ body {
 
       &__offers {
          margin: 0px 0px 64px 0px;
+      }
+
+      &__products {
+         margin: 0px 0px 95px 0px;
       }
    }
 }
@@ -181,6 +340,15 @@ body {
 
 @media (max-width: 991.98px) {
    .top {
+      &__imagebox img {
+         max-width: 100%;
+         margin: 0px 0px 0px 0px;
+      }
+
+      &__titlebox {
+         margin: 0px 0px 0px 100px;
+      }
+
       &__title {
          font-size: 24px;
          line-height: 28px;
@@ -222,12 +390,10 @@ body {
 
 /************************************OFFERS************************************************/
 
-.offers {
-   &__cardbox {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0px -15px;
-   }
+.cardbox {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0px -15px;
 
    &__column {
       flex: 0 1 33.333%;
@@ -241,10 +407,8 @@ body {
 }
 
 @media (max-width: 991.98px) {
-   .offers {
-      &__cardbox {
-         margin: 0px -10px;
-      }
+   .cardbox {
+      margin: 0px -10px;
 
       &__column {
          padding: 0px 10px;
@@ -257,7 +421,7 @@ body {
 }
 
 @media (max-width: 767.98px) {
-   .offers {
+   .cardbox {
       &__column {
          flex: 0 1 100%;
       }
@@ -304,7 +468,7 @@ body {
 }
 
 @media (max-width: 767.98px) {
-   .offers__column:last-child {
+   .cardbox__column:last-child {
       .card {
          height: 110px;
          &__image {
@@ -316,5 +480,258 @@ body {
             object-fit: cover;
          }
       }
+   }
+}
+
+/************************************PRODUCTS************************************************/
+
+.products {
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__titlebox {
+      text-align: center;
+      margin: 0px 0px 48px 0px;
+   }
+
+   &__title {
+      font-size: 30px;
+      line-height: 36px;
+      color: #222222;
+      margin: 0px 0px 6px 0px;
+   }
+
+   &__text {
+      color: #9f9f9f;
+   }
+
+   &__buttonbox {
+      margin: 48px 0px 0px 0px;
+   }
+
+   &__button {
+      border: 1px solid $site-color;
+      font-size: 16px;
+      line-height: 19px;
+      color: $site-color;
+      padding: 0px 38px;
+   }
+
+   &__button:hover {
+      color: #ffffff;
+      background: $site-color;
+   }
+}
+
+/************************************FEATURE************************************************/
+
+.feature {
+   background: #222224;
+}
+
+.servicebox {
+   display: flex;
+   margin: 0px -15px;
+   flex-wrap: wrap;
+
+   &__column {
+      padding: 0px 15px;
+      flex: 0 1 33.333%;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .servicebox {
+      &__column {
+         flex: 0 1 100%;
+      }
+
+      &__column:not(:first-child) {
+         margin: 47px 0px 0px 0px;
+      }
+   }
+}
+
+.service {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   *:not(:last-child) {
+      margin: 0px 0px 20px 0px;
+   }
+
+   &__image {
+      height: 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+   }
+
+   &__title {
+      font-size: 20px;
+      line-height: 24px;
+      color: #fbfbfb;
+   }
+
+   &__text {
+      font-weight: 300;
+      text-align: center;
+      color: #fbfbfb;
+   }
+}
+
+/************************************FOOTER************************************************/
+
+.footer {
+   &__base {
+      padding: 97px 0px 130px 0px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   &__base {
+      padding: 50px 0px 130px 0px;
+   }
+}
+
+@media (max-width: 767.98px) {
+   &__base {
+      padding: 50px 0px 110px 0px;
+   }
+}
+
+/************************************BASE************************************************/
+
+.base {
+   background: url(../img/index/base/base-bg.png) center / cover no-repeat;
+
+   &__content {
+      display: flex;
+   }
+
+   &__imagebox {
+      flex: 0 1 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__text {
+      max-width: 360px;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 24px;
+      color: #222224;
+      text-align: center;
+      margin: 30px 0px 0px 0px;
+   }
+
+   &__subscribe {
+      flex: 0 1 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0px 0px 0px;
+   }
+
+   &__title {
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      color: #222224;
+      margin: 0px 0px 32px 0px;
+   }
+
+   &__title span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 38px;
+   }
+
+   &__form {
+      min-width: 356px;
+      display: flex;
+   }
+
+   &__email {
+      flex: 0 1 72%;
+      background: #e1e1e1;
+      padding: 15px 5px 15px 20px;
+      border-radius: 20px 0px 0px 20px;
+   }
+
+   &__button {
+      flex: 0 1 28%;
+      color: #ffffff;
+      background: $site-color;
+      padding: 0px 8px;
+      border-radius: 0px 20px 20px 0px;
+   }
+
+   &__button:hover {
+      background: #e05c6e;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .base {
+      background-position: 25%;
+
+      &__content {
+         flex-direction: column;
+      }
+
+      &__imagebox {
+         flex: 0 1 100%;
+      }
+
+      &__subscribe {
+         flex: 0 1 100%;
+      }
+
+      &__title {
+         margin: 0px 0px 25px 0px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .base {
+      &__title {
+         font-size: 14px;
+         line-height: 20px;
+         margin: 0px 0px 20px 0px;
+      }
+   }
+}
+
+@media (max-width: 400px) {
+   .base {
+      &__form {
+         min-width: 300px;
+      }
+   }
+}
+
+/************************************COPY************************************************/
+
+.copy {
+   background: #222224;
+   width: 100%;
+   &__content {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__text {
+      font-size: 16px;
+      line-height: 19px;
+      color: #fbfbfb;
    }
 }
