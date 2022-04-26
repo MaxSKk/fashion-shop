@@ -8,12 +8,40 @@
    &__slider-block {
       padding: 11px 0px 42px 0px;
    }
+
+   &__specs {
+      margin: 0px 0px 128px 0px;
+   }
+
+   &__goods {
+      margin: 0px 0px 128px 0px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .main {
+      &__slider-block {
+         padding: 29px 0px;
+      }
+   }
 }
 
 @media (max-width: 767.98px) {
    .main {
       &__apex {
          padding: 24px 0px 46px 0px;
+      }
+
+      &__slider-block {
+         padding: 85px 0px;
+      }
+
+      &__specs {
+         margin: 0px 0px 65px 0px;
+      }
+
+      &__goods {
+         margin: 0px 0px 64px 0px;
       }
    }
 }
@@ -78,13 +106,211 @@
 /************************************SLIDER-BLOCK************************************************/
 
 .slider-block {
-   background: #f7f7f7;
+   background: #f7e4e2;
+   position: relative;
+   z-index: 0;
    &__content {
       display: flex;
       justify-content: center;
    }
 
    &__image {
-      max-width: 100%;
+      height: 93%;
+      width: 52%;
+      min-height: 454px;
+      min-width: 374px;
+   }
+
+   &__switch {
+      width: 47px;
+      height: 47px;
+      position: absolute;
+      cursor: pointer;
+   }
+
+   &__switch-left {
+      top: 50%;
+      left: 0;
+   }
+
+   &__switch-right {
+      top: 50%;
+      right: 0;
+   }
+
+   &__switch div {
+      position: relative;
+      background: rgba(42, 42, 42, 0.15);
+      width: 100%;
+      height: 100%;
+   }
+
+   &__switch div:before {
+      content: "";
+      position: absolute;
+      background: #000000;
+      height: 3.5px;
+      width: 20px;
+      top: 15.85px;
+   }
+
+   &__switch div:after {
+      content: "";
+      position: absolute;
+      background: #000000;
+      height: 3.5px;
+      width: 20px;
+      bottom: 15.85px;
+   }
+
+   &__switch-left div:before {
+      transform: rotate(-45deg);
+      left: 12px;
+   }
+
+   &__switch-left div:after {
+      transform: rotate(45deg);
+      left: 12px;
+   }
+
+   &__switch-right div:after {
+      transform: rotate(-45deg);
+      right: 12px;
+   }
+
+   &__switch-right div:before {
+      transform: rotate(45deg);
+      right: 12px;
+   }
+
+   &__switch:hover {
+      div:before,
+      div:after {
+         background: $site-color;
+      }
+   }
+}
+
+/************************************SPECS************************************************/
+
+.specs {
+   &__content {
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 5;
+      margin: -42px auto 0px;
+   }
+
+   &__parameters {
+      font-weight: 300;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 65px 0px;
+   }
+
+   &__collection-name {
+      color: $site-color;
+      padding: 0px 0px 14px 0px;
+      margin: 0px 0px 14px 0px;
+      position: relative;
+   }
+
+   &__collection-name:after {
+      content: "";
+      background-color: $site-color;
+      height: 3px;
+      width: 60px;
+      position: absolute;
+      top: 30px;
+      left: 43px;
+   }
+
+   &__title {
+      font-weight: inherit;
+      font-size: 18px;
+      line-height: 22px;
+      color: #4d4d4d;
+      margin: 0px 0px 48px 0px;
+   }
+
+   &__text {
+      color: #5e5e5e;
+      margin: 0px 0px 32px 0px;
+   }
+
+   &__price {
+      font-size: 24px;
+      line-height: 29px;
+      color: $site-color;
+   }
+
+   hr {
+      border: 1px solid #eaeaea;
+      width: 640px;
+   }
+
+   &__settings {
+      padding: 65px 0px 48px 0px;
+   }
+
+   &__buttonbox {
+      padding: 50px 0px 65px 0px;
+   }
+
+   &__button {
+      border: 1px solid $site-color;
+      font-size: 16px;
+      line-height: 19px;
+      color: $site-color;
+      padding: 0px 24px;
+   }
+
+   &__button p {
+      margin: 0px 0px 0px 23px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .specs {
+      background: #ffffff;
+      &__content {
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .specs {
+      &__parameters {
+         padding: 65px 0px 32px 0px;
+      }
+
+      &__title {
+         margin: 0px 0px 32px 0px;
+      }
+
+      hr {
+         width: 175px;
+      }
+
+      &__settings {
+         padding: 50px 0px 64px 0px;
+      }
+   }
+}
+
+/************************************GOODS************************************************/
+
+@media (max-width: 1169.98px) {
+   .goods {
+      .itembox__column:last-child {
+         display: none;
+      }
    }
 }
