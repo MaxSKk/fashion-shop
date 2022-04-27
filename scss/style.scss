@@ -64,7 +64,7 @@ body {
    top: 0;
    left: 0;
    z-index: 100;
-   &__contant {
+   &__content {
       min-height: 75px;
       display: flex;
       align-items: center;
@@ -86,8 +86,16 @@ body {
       margin: 0px 33px 0px 0px;
    }
 
-   &__link img {
-      min-height: 26px;
+   &__link {
+      height: 38px;
+      width: 32px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      .fa {
+         font-size: 30px;
+         color: #ffffff;
+      }
    }
 
    &__burger {
@@ -140,6 +148,11 @@ body {
    &__closer {
       align-self: flex-end;
       cursor: pointer;
+
+      .fa {
+         font-size: 18px;
+         color: #6f6e6e;
+      }
    }
 
    &__content {
@@ -160,11 +173,13 @@ body {
       margin: 0px 0px 12px 0px;
    }
 
-   &__button {
+   &__icons {
       display: none;
-      font-size: 30px;
-      color: #ffffff;
-      background-color: $site-color;
+   }
+
+   &__icon-link {
+      font-size: 40px;
+      color: #000000;
    }
 
    &__link {
@@ -218,8 +233,9 @@ body {
          margin: 60px 0px 0px 0px;
       }
 
-      &__button {
+      &__icons {
          display: flex;
+         justify-content: space-around;
          margin: 0px 0px 60px 0px;
       }
    }
@@ -653,6 +669,11 @@ body {
       border: 1px solid #ffffff;
       pointer-events: all;
       transition: all 0.5s ease 0s;
+
+      .fa {
+         font-size: 25px;
+         color: #ffffff;
+      }
    }
 
    &__add:hover {
@@ -873,6 +894,58 @@ body {
       font-size: 16px;
       line-height: 19px;
       color: #fbfbfb;
+   }
+
+   &__list {
+      display: flex;
+   }
+
+   &__list li:not(:last-child) {
+      margin: 0px 8px 0px 0px;
+   }
+
+   &__link {
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      transition: all 0.5s ease-in-out 0s;
+
+      .fa {
+         font-size: 15px;
+         color: #000000;
+         transition: all 0.5s ease-in-out 0s;
+      }
+   }
+
+   &__link:hover {
+      background: $site-color;
+      transition: all 0.5s ease-in-out 0s;
+
+      .fa {
+         color: #ffffff;
+         transition: all 0.5s ease-in-out 0s;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .copy {
+      &__content {
+         flex-direction: column;
+      }
+
+      &__text {
+         order: 2;
+         margin: 0px 0px 25px 0px;
+      }
+
+      &__linkbox {
+         order: 1;
+         margin: 43px 0px 25px 0px;
+      }
    }
 }
 
