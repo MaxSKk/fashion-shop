@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="https://kit.fontawesome.com/533455c231.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="css/style.css">
-   <title>Fashion Shop</title>
+   <title>Fashion Shop: Catalog</title>
 </head>
 
 <body>
@@ -82,76 +82,147 @@
       </header>
 
       <main class="main">
-         <section class="main__top top">
-            <div class="top__content container">
-               <div class="top__imagebox">
-                  <img src="img/index/top/top-image.png" alt="top-image">
-               </div>
-               <div class="top__titlebox">
-                  <h1 class="top__title">
-                     <span class="bold">THE BRAND</span><br> OF LUXERIOUS <span class="pink">FASHION</span>
-                  </h1>
-               </div>
+         <section class="main__apex apex">
+            <div class="apex__content container">
+               <h1 class="apex__title">NEW ARRIVALS</h1>
+               <nav class="apex__nav">
+                  <ul class="apex__list">
+                     <li><a href="index.html" class="apex__link">HOME</a></li>
+                     <li><a href="#" class="apex__link">MEN</a></li>
+                     <li>NEW ARRIVALS</li>
+                  </ul>
+               </nav>
             </div>
          </section>
 
-         <section class="main__offers offers">
-            <div class="offers__content container">
-               <div class="offers__cardbox cardbox">
+         <section class="main__showcase showcase">
+            <div class="showcase__content container">
 
-                  <div class="cardbox__column">
-                     <div class="cardbox__card card">
-                        <a class="card__link" href="#">
-                           <img class="card__image" src="img/index/offers/offers-img-1.png" alt="30% OFF FOR WOMEN">
-                           <h3 class="card__title">30% OFF<br><span>FOR WOMEN</span></h3>
-                        </a>
+               <div class="showcase__settingsbox">
+
+                  <div class="showcase__filterbox">
+                     <div class="showcase__filter filter">
+                        <div class="filter__title">
+                           <h3>FILTER</h3>
+                           <i class="fa fa-solid fa-arrow-down-wide-short"></i>
+                        </div>
+                        <div class="filter__body">
+                           <div class="filter__subfilter subfilter">
+                              <h4 class="subfilter__title">CATEGORY</h4>
+                              <div class="subfilter__body">
+                                 <a href="#" class="subfilter__link">Accessories</a>
+                                 <a href="#" class="subfilter__link">Bags</a>
+                                 <a href="#" class="subfilter__link">Denim</a>
+                                 <a href="#" class="subfilter__link">Hoodies & Sweatshirts</a>
+                                 <a href="#" class="subfilter__link">Jackets & Coats</a>
+                                 <a href="#" class="subfilter__link">Polos</a>
+                                 <a href="#" class="subfilter__link">Shirts</a>
+                                 <a href="#" class="subfilter__link">Shoes</a>
+                                 <a href="#" class="subfilter__link">Sweaters & Knits</a>
+                                 <a href="#" class="subfilter__link">T-Shirts</a>
+                                 <a href="#" class="subfilter__link">Tanks</a>
+                              </div>
+                           </div>
+
+                           <div class="filter__subfilter subfilter">
+                              <h4 class="subfilter__title">BRAND</h4>
+                              <div class="subfilter__body">
+                                 <a href="#" class="subfilter__link">Lorem ipsum</a>
+                                 <a href="#" class="subfilter__link">Dolor sit amet</a>
+                                 <a href="#" class="subfilter__link">Consectetur</a>
+                                 <a href="#" class="subfilter__link">Adipisicing elit</a>
+                                 <a href="#" class="subfilter__link">Veniam</a>
+                              </div>
+                           </div>
+
+                           <div class="filter__subfilter subfilter">
+                              <h4 class="subfilter__title">DESIGNER</h4>
+                              <div class="subfilter__body">
+                                 <a href="#" class="subfilter__link">Est dicta</a>
+                                 <a href="#" class="subfilter__link">Nam sunt mollitia</a>
+                                 <a href="#" class="subfilter__link">Incidunt quisquam qui</a>
+                                 <a href="#" class="subfilter__link">Beatae id</a>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
 
-                  <div class="cardbox__column">
-                     <div class="cardbox__card card">
-                        <a class="card__link" href="#">
-                           <img class="card__image" src="img/index/offers/offers-img-2.png" alt="HOT DEAL FOR MEN">
-                           <h3 class="card__title">HOT DEAL<br><span>FOR MEN</span></h3>
-                        </a>
+                  <div class="showcase__settings settings">
+
+                     <div class="settings__element">
+                        <div class="settings__spoiler spoiler">
+                           <h4 class="spoiler__title">TRENDING NOW <i class="fa fa-solid fa-angle-down"></i></h4>
+                           <div class="spoiler__body">
+                              <form action="#">
+                                 <input id="trand-hats" type="checkbox" value="hats">
+                                 <label for="trand-hats">Hats</label>
+                                 <br>
+                                 <input id="trand-sneakers" type="checkbox" value="sneakers">
+                                 <label for="trand-sneakers">Sneakers</label>
+                                 <br>
+                                 <input id="trand-sweatshirts" type="checkbox" value="sweatshirts">
+                                 <label for="trand-sweatshirts">Sweatshirts</label>
+                                 <br>
+                                 <input id="trand-shorts" type="checkbox" value="shorts">
+                                 <label for="trand-shorts">Shorts</label>
+                                 <br>
+                                 <input id="trand-glasses" type="checkbox" value="glasses">
+                                 <label for="trand-glasses">Glasses</label>
+                                 <br>
+                                 <input id="trand-backpacks" type="checkbox" value="backpacks">
+                                 <label for="trand-backpacks">Backpacks</label>
+                              </form>
+                           </div>
+                        </div>
                      </div>
+
+                     <div class="settings__element">
+                        <div class="settings__spoiler spoiler">
+                           <h4 class="spoiler__title">SIZE <i class="fa fa-solid fa-angle-down"></i></h4>
+                           <div class="spoiler__body">
+                              <form action="#">
+                                 <input id="size-s" type="checkbox" name="size" value="s">
+                                 <label for="size-s">S</label>
+                                 <br>
+                                 <input id="size-xs" type="checkbox" name="size" value="xs">
+                                 <label for="size-xs">XS</label>
+                                 <br>
+                                 <input id="size-m" type="checkbox" name="size" value="m">
+                                 <label for="size-m">M</label>
+                                 <br>
+                                 <input id="size-l" type="checkbox" name="size" value="l">
+                                 <label for="size-l">L</label>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="settings__element">
+                        <div class="settings__spoiler spoiler">
+                           <h4 class="spoiler__title">PRICE <i class="fa fa-solid fa-angle-down"></i></h4>
+                           <div class="spoiler__body spoiler__body_brd">
+                              <form action="#">
+                                 <input id="min" type="number" step="500" min="1000" max="10000">
+                                 <label for="min">Min</label>
+                                 <br>
+                                 <input id="max" type="number" step="500" min="10000" max="20000">
+                                 <label for="max">Max</label>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+
                   </div>
 
-                  <div class="cardbox__column">
-                     <div class="cardbox__card card">
-                        <a class="card__link" href="#">
-                           <img class="card__image" src="img/index/offers/offers-img-3.png" alt="NEW ARRIVALS FOR KIDS">
-                           <h3 class="card__title">NEW ARRIVALS<br><span>FOR KIDS</span></h3>
-                        </a>
-                     </div>
-                  </div>
-
-                  <div class="cardbox__column">
-                     <div class="cardbox__card card">
-                        <a class="card__link" href="#">
-                           <img class="card__image" src="img/index/offers/offers-img-4.png"
-                              alt="LUXIROUS & TRENDY ACCESORIES">
-                           <h3 class="card__title">LUXIROUS & TRENDY<br><span>ACCESORIES</span></h3>
-                        </a>
-                     </div>
-                  </div>
                </div>
-            </div>
-         </section>
 
-         <section class="main__products products">
-            <div class="products__content container">
-               <div class="products__titlebox">
-                  <h3 class="products__title">Fetured Items</h3>
-                  <p class="products__text">Shop for items based on what we featured in this week</p>
-               </div>
-
-               <div class="products__itembox itembox">
+               <div class="showcase__itembox itembox">
 
                   <div class="itembox__column">
                      <div class="itembox__item item">
                         <a class="item__link" href="#">
-                           <img class="item__image" src="img/index/products/products-img-1.png"
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-1.png"
                               alt="ELLERY X M'O CAPSULE">
                            <div class="item__textbox">
                               <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
@@ -173,7 +244,7 @@
                   <div class="itembox__column">
                      <div class="itembox__item item">
                         <a class="item__link" href="product.html">
-                           <img class="item__image" src="img/index/products/products-img-2.png"
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-2.png"
                               alt="ELLERY X M'O CAPSULE">
                            <div class="item__textbox">
                               <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
@@ -195,7 +266,7 @@
                   <div class="itembox__column">
                      <div class="itembox__item item">
                         <a class="item__link" href="#">
-                           <img class="item__image" src="img/index/products/products-img-3.png"
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-3.png"
                               alt="ELLERY X M'O CAPSULE">
                            <div class="item__textbox">
                               <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
@@ -217,7 +288,7 @@
                   <div class="itembox__column">
                      <div class="itembox__item item">
                         <a class="item__link" href="#">
-                           <img class="item__image" src="img/index/products/products-img-4.png"
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-4.png"
                               alt="ELLERY X M'O CAPSULE">
                            <div class="item__textbox">
                               <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
@@ -239,7 +310,7 @@
                   <div class="itembox__column">
                      <div class="itembox__item item">
                         <a class="item__link" href="#">
-                           <img class="item__image" src="img/index/products/products-img-5.png"
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-5.png"
                               alt="ELLERY X M'O CAPSULE">
                            <div class="item__textbox">
                               <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
@@ -261,7 +332,73 @@
                   <div class="itembox__column">
                      <div class="itembox__item item">
                         <a class="item__link" href="#">
-                           <img class="item__image" src="img/index/products/products-img-6.png"
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-6.png"
+                              alt="ELLERY X M'O CAPSULE">
+                           <div class="item__textbox">
+                              <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
+                              <p class="item__description">Known for her sculptural takes on traditional tailoring,
+                                 Australian arbiter of cool Kym Ellery teams up with Moda
+                                 Operandi.</p>
+                              <p class="item__price">$52.00</p>
+                           </div>
+                        </a>
+                        <div class="item__addbox">
+                           <a class="item__add" href="#">
+                              <i class="fa fa-solid fa-cart-shopping"></i>
+                              <p class="item__add-text">Add to Cart</p>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="itembox__column">
+                     <div class="itembox__item item">
+                        <a class="item__link" href="#">
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-7.png"
+                              alt="ELLERY X M'O CAPSULE">
+                           <div class="item__textbox">
+                              <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
+                              <p class="item__description">Known for her sculptural takes on traditional tailoring,
+                                 Australian arbiter of cool Kym Ellery teams up with Moda
+                                 Operandi.</p>
+                              <p class="item__price">$52.00</p>
+                           </div>
+                        </a>
+                        <div class="item__addbox">
+                           <a class="item__add" href="#">
+                              <i class="fa fa-solid fa-cart-shopping"></i>
+                              <p class="item__add-text">Add to Cart</p>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="itembox__column">
+                     <div class="itembox__item item">
+                        <a class="item__link" href="#">
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-8.png"
+                              alt="ELLERY X M'O CAPSULE">
+                           <div class="item__textbox">
+                              <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
+                              <p class="item__description">Known for her sculptural takes on traditional tailoring,
+                                 Australian arbiter of cool Kym Ellery teams up with Moda
+                                 Operandi.</p>
+                              <p class="item__price">$52.00</p>
+                           </div>
+                        </a>
+                        <div class="item__addbox">
+                           <a class="item__add" href="#">
+                              <i class="fa fa-solid fa-cart-shopping"></i>
+                              <p class="item__add-text">Add to Cart</p>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="itembox__column">
+                     <div class="itembox__item item">
+                        <a class="item__link" href="#">
+                           <img class="item__image" src="img/catalog/showcase/showcase-img-9.png"
                               alt="ELLERY X M'O CAPSULE">
                            <div class="item__textbox">
                               <h4 class="item__name">ELLERY X M'O CAPSULE</h4>
@@ -281,9 +418,23 @@
                   </div>
                </div>
 
-               <div class="products__buttonbox">
-                  <a href="catalog.html" class="products__button button">Browse All Product</a>
+               <div class="showcase__pagebox">
+                  <div class="showcase__pagination pagination">
+                     <a class="pagination__arrow" href="#"><i class="fa fa-solid fa-angle-left"></i></a>
+                     <ul class="pagination__list">
+                        <li class="pagination__link">1</li>
+                        <li><a href="#" class="pagination__link">2</a></li>
+                        <li><a href="#" class="pagination__link">3</a></li>
+                        <li><a href="#" class="pagination__link">4</a></li>
+                        <li><a href="#" class="pagination__link">5</a></li>
+                        <li><a href="#" class="pagination__link">6</a></li>
+                        <li><a href="#" class="pagination__link">....</a></li>
+                        <li><a href="#" class="pagination__link">20</a></li>
+                     </ul>
+                     <a class="pagination__arrow" href="#"><i class="fa fa-solid fa-angle-right"></i></a>
+                  </div>
                </div>
+
             </div>
          </section>
 

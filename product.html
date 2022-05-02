@@ -123,9 +123,10 @@
                </div>
                <hr>
                <div class="specs__settings settings">
+
                   <div class="settings__element">
-                     <details class="settings__spoiler spoiler">
-                        <summary class="spoiler__title">CHOOSE COLOR <i class="fa fa-solid fa-angle-down"></i></summary>
+                     <div class="settings__spoiler spoiler">
+                        <h4 class="spoiler__title">CHOOSE COLOR <i class="fa fa-solid fa-angle-down"></i></h4>
                         <div class="spoiler__body">
                            <form action="#">
                               <input id="color-black" type="radio" name="color" value="black">
@@ -141,12 +142,12 @@
                               <label for="color-red">Red</label>
                            </form>
                         </div>
-                     </details>
+                     </div>
                   </div>
 
                   <div class="settings__element">
-                     <details class="settings__spoiler spoiler">
-                        <summary class="spoiler__title">CHOOSE SIZE <i class="fa fa-solid fa-angle-down"></i></summary>
+                     <div class="settings__spoiler spoiler">
+                        <h4 class="spoiler__title">CHOOSE SIZE <i class="fa fa-solid fa-angle-down"></i></h4>
                         <div class="spoiler__body">
                            <form action="#">
                               <input id="size-s" type="radio" name="size" value="s">
@@ -162,29 +163,21 @@
                               <label for="size-l">L</label>
                            </form>
                         </div>
-                     </details>
+                     </div>
                   </div>
 
                   <div class="settings__element">
-                     <details class="settings__spoiler spoiler">
-                        <summary class="spoiler__title">QUANTITY <i class="fa fa-solid fa-angle-down"></i></summary>
-                        <div class="spoiler__body">
+                     <div class="settings__spoiler spoiler">
+                        <h4 class="spoiler__title">QUANTITY <i class="fa fa-solid fa-angle-down"></i></h4>
+                        <div class="spoiler__body spoiler__body_brd">
                            <form action="#">
-                              <input id="color-black" type="radio" name="color" value="black">
-                              <label for="color-black">Black</label>
-                              <br>
-                              <input id="color-white" type="radio" name="color" value="white">
-                              <label for="color-white">White</label>
-                              <br>
-                              <input id="color-gray" type="radio" name="color" value="gray">
-                              <label for="color-gray">Gray</label>
-                              <br>
-                              <input id="color-red" type="radio" name="color" value="red">
-                              <label for="color-red">Red</label>
+                              <input id="quantity" type="number" required min="1" max="100">
+                              <label for="quantity">Quantity</label>
                            </form>
                         </div>
-                     </details>
+                     </div>
                   </div>
+
                </div>
                <div class="specs__buttonbox">
                   <a href="#" class="specs__button button">
