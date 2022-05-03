@@ -1312,7 +1312,7 @@ body {
 }
 
 /************************************SPECS************************************************/
-.specs__content {
+.specs__body {
   background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1326,7 +1326,7 @@ body {
           align-items: center;
   position: relative;
   z-index: 1;
-  margin: -42px auto 0px;
+  margin: -42px 0px 0px 0px;
 }
 
 .specs__parameters {
@@ -1392,7 +1392,7 @@ body {
 }
 
 .specs__buttonbox {
-  padding: 50px 0px 65px 0px;
+  padding: 0px 0px 65px 0px;
 }
 
 .specs__button {
@@ -1420,8 +1420,8 @@ body {
   .specs {
     background: #ffffff;
   }
-  .specs__content {
-    margin: 0 auto;
+  .specs__body {
+    margin: 0px 0px 0px 0px;
   }
 }
 
