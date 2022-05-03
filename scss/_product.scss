@@ -295,10 +295,8 @@
 
 @media (max-width: 767.98px) {
    .settings {
-      flex-direction: column;
-
       &__element:not(:last-child) {
-         margin: 0px 0px 25px 0px;
+         margin: 0px 15px 0px 0px;
       }
    }
 }
@@ -306,6 +304,7 @@
 .spoiler {
    position: relative;
    &__title {
+      white-space: nowrap;
       color: #6f6e6e;
       cursor: pointer;
 
@@ -321,7 +320,7 @@
    &__body {
       position: absolute;
       top: 20px;
-      left: 5px;
+      left: 0;
       z-index: 100;
       display: none;
       background: #ffffff;
@@ -355,9 +354,13 @@
 
 @media (max-width: 767.98px) {
    .spoiler {
-      &__body_brd {
-         left: 5px;
-         right: auto;
+      &__title {
+         font-size: 10px;
+         line-height: 12px;
+      }
+
+      form {
+         min-width: 80px;
       }
    }
 }
