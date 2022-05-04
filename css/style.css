@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap");
 * {
   padding: 0;
@@ -983,10 +984,13 @@ body {
 }
 
 .base__form {
-  min-width: 356px;
+  width: 62.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .base__email {
@@ -1042,12 +1046,6 @@ body {
     font-size: 14px;
     line-height: 20px;
     margin: 0px 0px 20px 0px;
-  }
-}
-
-@media (max-width: 400px) {
-  .base__form {
-    min-width: 300px;
   }
 }
 
@@ -1239,11 +1237,8 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .apex__title {
-    padding: 0px 0px 16px 0px;
-  }
-  .apex__nav {
-    padding: 16px 0px 0px 0px;
+  .apex__content > *:not(:last-child) {
+    margin: 0px 0px 32px 0px;
   }
 }
 
@@ -1744,5 +1739,184 @@ body {
 
 .pagination__link:hover {
   color: #f16d7f;
+}
+
+/************************************MAIN************************************************/
+.main__introduction {
+  padding: 64px 0px 96px 0px;
+}
+
+@media (max-width: 991.98px) {
+  .main__introduction {
+    padding: 40px 0px 96px 0px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main__apex_reg {
+    padding: 60px 0px;
+  }
+}
+
+/************************************INTRODUCTION************************************************/
+.introduction__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.introduction__login {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 31.5%;
+          flex: 0 1 31.5%;
+}
+
+.introduction__loyalty {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 57%;
+          flex: 0 1 57%;
+  margin: 0px 0px 0px 128px;
+}
+
+@media (max-width: 991.98px) {
+  .introduction__login {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+  .introduction__loyalty {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin: 0px 0px 0px 22px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .introduction__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .introduction__login {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+  .introduction__loyalty {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin: 40px 0px 0px 0px;
+  }
+}
+
+.login__form fieldset:not(:last-of-type) {
+  margin: 0px 0px 33px 0px;
+}
+
+.login__form fieldset:last-of-type {
+  margin: 0px 0px 15px 0px;
+}
+
+.login__form fieldset:nth-child(2) {
+  position: relative;
+}
+
+.login__big-label {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  display: inline-block;
+  margin: 0px 0px 20px 0px;
+}
+
+.login__small-label {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  display: inline-block;
+  padding: 0px 0px 0px 20px;
+}
+
+.login__small-label:not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+
+.login #name,
+.login #details {
+  width: 100%;
+  border: 1px solid #a4a4a4;
+  padding: 14px 17px;
+}
+
+.login #name:not(:last-child),
+.login #details:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+
+.login #gender-male,
+.login #gender-female,
+.login #gender-other {
+  border: 1px solid #a4a4a4;
+  position: absolute;
+  top: 2.5px;
+}
+
+.login__text {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #b1b1b1;
+  margin: 0px 0px 39px 0px;
+}
+
+.login__button {
+  color: #ffffff;
+  background: #f16d7f;
+  padding: 0px 29px;
+}
+
+.login__button .fa {
+  font-size: 14px;
+  margin: 0px 0px 0px 20px;
+}
+
+.login__button:hover {
+  background: #e05c6e;
+}
+
+.loyalty > *:not(:last-child) {
+  margin: 0px 0px 22px 0px;
+}
+
+.loyalty__title, .loyalty__text, .loyalty__list li {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.loyalty__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loyalty__list li:not(:last-child) {
+  margin: 0px 0px 16px 0px;
+}
+
+.loyalty__list li:before {
+  content: "✓";
+  margin: 0px 20px 0px 0px;
+}
+
+@media (max-width: 991.98px) {
+  .loyalty__title, .loyalty__text, .loyalty__list li {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

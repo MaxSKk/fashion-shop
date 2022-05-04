@@ -67,8 +67,9 @@
    }
 
    &__form {
-      min-width: 356px;
+      width: 62.5%;
       display: flex;
+      justify-content: center;
    }
 
    &__email {
@@ -119,14 +120,6 @@
          font-size: 14px;
          line-height: 20px;
          margin: 0px 0px 20px 0px;
-      }
-   }
-}
-
-@media (max-width: 400px) {
-   .base {
-      &__form {
-         min-width: 300px;
       }
    }
 }

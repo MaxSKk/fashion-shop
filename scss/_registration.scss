@@ -1,0 +1,187 @@
+/************************************MAIN************************************************/
+
+.main {
+   &__introduction {
+      padding: 64px 0px 96px 0px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .main {
+      &__introduction {
+         padding: 40px 0px 96px 0px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .main {
+      &__apex_reg {
+         padding: 60px 0px;
+      }
+   }
+}
+
+/************************************INTRODUCTION************************************************/
+
+.introduction {
+   &__content {
+      display: flex;
+   }
+
+   &__login {
+      flex: 0 1 31.5%;
+   }
+
+   &__loyalty {
+      flex: 0 1 57%;
+      margin: 0px 0px 0px 128px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .introduction {
+      &__login {
+         flex: 0 1 50%;
+      }
+
+      &__loyalty {
+         flex: 0 1 50%;
+         margin: 0px 0px 0px 22px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .introduction {
+      &__content {
+         flex-direction: column;
+      }
+
+      &__login {
+         flex: 0 1 100%;
+      }
+
+      &__loyalty {
+         flex: 0 1 100%;
+         margin: 40px 0px 0px 0px;
+      }
+   }
+}
+
+.login {
+   &__form {
+      fieldset:not(:last-of-type) {
+         margin: 0px 0px 33px 0px;
+      }
+      fieldset:last-of-type {
+         margin: 0px 0px 15px 0px;
+      }
+
+      fieldset:nth-child(2) {
+         position: relative;
+      }
+   }
+
+   &__big-label {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      color: #222222;
+      display: inline-block;
+      margin: 0px 0px 20px 0px;
+   }
+
+   &__small-label {
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+      display: inline-block;
+      padding: 0px 0px 0px 20px;
+   }
+
+   &__small-label:not(:last-child) {
+      margin: 0px 20px 0px 0px;
+   }
+
+   #name,
+   #details {
+      width: 100%;
+      border: 1px solid #a4a4a4;
+      padding: 14px 17px;
+   }
+
+   #name:not(:last-child),
+   #details:not(:last-child) {
+      margin: 0px 0px 20px 0px;
+   }
+
+   #gender-male,
+   #gender-female,
+   #gender-other {
+      border: 1px solid #a4a4a4;
+      position: absolute;
+      top: 2.5px;
+   }
+
+   &__text {
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 16px;
+      color: #b1b1b1;
+      margin: 0px 0px 39px 0px;
+   }
+
+   &__button {
+      color: #ffffff;
+      background: $site-color;
+      padding: 0px 29px;
+
+      .fa {
+         font-size: 14px;
+         margin: 0px 0px 0px 20px;
+      }
+   }
+
+   &__button:hover {
+      background: #e05c6e;
+   }
+}
+
+.loyalty {
+   & > *:not(:last-child) {
+      margin: 0px 0px 22px 0px;
+   }
+   &__title {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+   }
+
+   &__text {
+      @extend .loyalty__title;
+   }
+
+   &__list li {
+      @extend .loyalty__title;
+      display: flex;
+   }
+
+   &__list li:not(:last-child) {
+      margin: 0px 0px 16px 0px;
+   }
+
+   &__list li:before {
+      content: "✓";
+      margin: 0px 20px 0px 0px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .loyalty {
+      &__title {
+         font-size: 16px;
+         line-height: 19px;
+      }
+   }
+}

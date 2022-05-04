@@ -93,12 +93,8 @@
          flex-direction: column;
       }
 
-      &__title {
-         padding: 0px 0px 16px 0px;
-      }
-
-      &__nav {
-         padding: 16px 0px 0px 0px;
+      &__content > *:not(:last-child) {
+         margin: 0px 0px 32px 0px;
       }
    }
 }
@@ -164,9 +160,6 @@
 /************************************SPECS************************************************/
 
 .specs {
-   &__content {
-   }
-
    &__body {
       background: #ffffff;
       display: flex;
