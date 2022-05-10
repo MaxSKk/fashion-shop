@@ -165,13 +165,16 @@
 
 .specs {
    &__content {
+   }
+
+   &__body {
       background: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
       position: relative;
-      z-index: 5;
-      margin: -42px auto 0px;
+      z-index: 1;
+      margin: -42px 0px 0px 0px;
    }
 
    &__parameters {
@@ -230,7 +233,7 @@
    }
 
    &__buttonbox {
-      padding: 50px 0px 65px 0px;
+      padding: 0px 0px 65px 0px;
    }
 
    &__button {
@@ -259,8 +262,8 @@
 @media (max-width: 991.98px) {
    .specs {
       background: #ffffff;
-      &__content {
-         margin: 0 auto;
+      &__body {
+         margin: 0px 0px 0px 0px;
       }
    }
 }
@@ -287,6 +290,7 @@
 
 .settings {
    display: flex;
+
    &__element:not(:last-child) {
       margin: 0px 25px 0px 0px;
    }
@@ -294,51 +298,76 @@
 
 @media (max-width: 767.98px) {
    .settings {
-      flex-direction: column;
-
       &__element:not(:last-child) {
-         margin: 0px 0px 25px 0px;
+         margin: 0px 15px 0px 0px;
       }
    }
 }
 
 .spoiler {
+   position: relative;
    &__title {
-      cursor: pointer;
+      white-space: nowrap;
       color: #6f6e6e;
-      list-style: none;
+      cursor: pointer;
 
       .fa {
          margin: 0px 0px 0px 9px;
       }
    }
 
+   &__title.open {
+      color: $site-color;
+   }
+
    &__body {
-      min-width: 110px;
-      padding: 10px;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 100;
+      display: none;
+      background: #ffffff;
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      padding: 9px 9px 12px 9px;
 
-      input {
-         cursor: pointer;
-      }
-
-      input:not(:last-of-type) {
-         margin-bottom: 10px;
+      form {
+         min-width: 100px;
+         white-space: nowrap;
       }
 
       label {
-         margin: 0px 0px 0px 5px;
-         display: inline-block;
-         width: 75%;
          color: #6f6e6e;
-         cursor: pointer;
+         margin-left: 9px;
+         display: inline-block;
+         width: 80%;
+         &:not(:last-of-type) {
+            margin-bottom: 10px;
+         }
+      }
+   }
+
+   &__body_brd {
+      left: auto;
+      right: 0;
+      input {
+         border: 1px solid #6f6e6e;
       }
    }
 }
 
-details[open] > summary {
-   color: $site-color;
+@media (max-width: 767.98px) {
+   .spoiler {
+      &__title {
+         font-size: 10px;
+         line-height: 12px;
+      }
+
+      form {
+         min-width: 80px;
+      }
+   }
 }
+
 /************************************GOODS************************************************/
 
 @media (max-width: 1169.98px) {
