@@ -1,0 +1,350 @@
+/************************************MAIN************************************************/
+.main {
+   &__apex {
+      margin: 75px 0px 0px 0px;
+      padding: 60px 0px;
+   }
+
+   &__slider-block {
+      padding: 11px 0px 42px 0px;
+   }
+
+   &__specs {
+      margin: 0px 0px 128px 0px;
+   }
+
+   &__goods {
+      margin: 0px 0px 128px 0px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .main {
+      &__slider-block {
+         padding: 29px 0px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .main {
+      &__apex {
+         padding: 24px 0px 46px 0px;
+      }
+
+      &__slider-block {
+         padding: 85px 0px;
+      }
+
+      &__specs {
+         margin: 0px 0px 65px 0px;
+      }
+
+      &__goods {
+         margin: 0px 0px 64px 0px;
+      }
+   }
+}
+
+/************************************APEX************************************************/
+
+.apex {
+   background: #f8f3f4;
+   &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__title {
+      font-size: 24px;
+      line-height: 29px;
+      color: $site-color;
+   }
+
+   &__list {
+      display: flex;
+   }
+
+   &__list li:last-child {
+      color: $site-color;
+      padding: 0px 0px 0px 5px;
+   }
+
+   &__list li:not(:last-child):after {
+      content: "/";
+      color: #636363;
+   }
+
+   &__link {
+      font-weight: 300;
+      color: #636363;
+      padding: 5px;
+   }
+
+   &__link:hover {
+      color: $site-color;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .apex {
+      &__content {
+         flex-direction: column;
+      }
+
+      &__title {
+         padding: 0px 0px 16px 0px;
+      }
+
+      &__nav {
+         padding: 16px 0px 0px 0px;
+      }
+   }
+}
+
+/************************************SLIDER-BLOCK************************************************/
+
+.slider-block {
+   background: #f7e4e2;
+   position: relative;
+   z-index: 0;
+   &__content {
+      display: flex;
+      justify-content: center;
+   }
+
+   &__image {
+      height: 93%;
+      width: 52%;
+      min-height: 454px;
+      min-width: 374px;
+   }
+
+   &__switch {
+      width: 47px;
+      height: 47px;
+      position: absolute;
+      cursor: pointer;
+   }
+
+   &__switch-left {
+      top: 50%;
+      left: 0;
+   }
+
+   &__switch-right {
+      top: 50%;
+      right: 0;
+   }
+
+   &__switch div {
+      background: rgba(42, 42, 42, 0.15);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .fa {
+         font-size: 30px;
+         color: #000000;
+      }
+   }
+
+   &__switch:hover {
+      div {
+         .fa {
+            color: $site-color;
+         }
+      }
+   }
+}
+
+/************************************SPECS************************************************/
+
+.specs {
+   &__content {
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 5;
+      margin: -42px auto 0px;
+   }
+
+   &__parameters {
+      font-weight: 300;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 65px 0px;
+   }
+
+   &__collection-name {
+      color: $site-color;
+      padding: 0px 0px 14px 0px;
+      margin: 0px 0px 14px 0px;
+      position: relative;
+   }
+
+   &__collection-name:after {
+      content: "";
+      background-color: $site-color;
+      height: 3px;
+      width: 60px;
+      position: absolute;
+      top: 30px;
+      left: 43px;
+   }
+
+   &__title {
+      font-weight: inherit;
+      font-size: 18px;
+      line-height: 22px;
+      color: #4d4d4d;
+      margin: 0px 0px 48px 0px;
+   }
+
+   &__text {
+      color: #5e5e5e;
+      margin: 0px 0px 32px 0px;
+   }
+
+   &__price {
+      font-size: 24px;
+      line-height: 29px;
+      color: $site-color;
+   }
+
+   hr {
+      border: 1px solid #eaeaea;
+      width: 640px;
+   }
+
+   &__settings {
+      padding: 65px 0px 48px 0px;
+   }
+
+   &__buttonbox {
+      padding: 50px 0px 65px 0px;
+   }
+
+   &__button {
+      @extend .products__button;
+      padding: 0px 24px;
+
+      .fa {
+         font-size: 25px;
+         color: $site-color;
+         transition: all 0.3s ease 0s;
+      }
+   }
+
+   &__button:hover {
+      .fa {
+         color: #ffffff;
+         transition: all 0.5s ease 0s;
+      }
+   }
+
+   &__button p {
+      margin: 0px 0px 0px 23px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .specs {
+      background: #ffffff;
+      &__content {
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .specs {
+      &__parameters {
+         padding: 65px 0px 32px 0px;
+      }
+
+      &__title {
+         margin: 0px 0px 32px 0px;
+      }
+
+      hr {
+         width: 175px;
+      }
+
+      &__settings {
+         padding: 50px 0px 64px 0px;
+      }
+   }
+}
+
+.settings {
+   display: flex;
+   &__element:not(:last-child) {
+      margin: 0px 25px 0px 0px;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .settings {
+      flex-direction: column;
+
+      &__element:not(:last-child) {
+         margin: 0px 0px 25px 0px;
+      }
+   }
+}
+
+.spoiler {
+   &__title {
+      cursor: pointer;
+      color: #6f6e6e;
+      list-style: none;
+
+      .fa {
+         margin: 0px 0px 0px 9px;
+      }
+   }
+
+   &__body {
+      min-width: 110px;
+      padding: 10px;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+      input {
+         cursor: pointer;
+      }
+
+      input:not(:last-of-type) {
+         margin-bottom: 10px;
+      }
+
+      label {
+         margin: 0px 0px 0px 5px;
+         display: inline-block;
+         width: 75%;
+         color: #6f6e6e;
+         cursor: pointer;
+      }
+   }
+}
+
+details[open] > summary {
+   color: $site-color;
+}
+/************************************GOODS************************************************/
+
+@media (max-width: 1169.98px) {
+   .goods {
+      .itembox__column:last-child {
+         display: none;
+      }
+   }
+}
