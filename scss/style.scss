@@ -48,11 +48,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: all 0.3s ease 0s;
-
-   &:hover {
-      transition: all 0.5s ease 0s;
-   }
+   transition: all 0.5s ease 0s;
 }
 
 /************************************HEADER************************************************/
@@ -417,7 +413,6 @@ body {
 
    &:hover {
       box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
-      transition: all 0.5s ease 0s;
    }
 
    &__link {
@@ -431,7 +426,6 @@ body {
 
    &:hover &__image {
       filter: brightness(30%);
-      transition: all 0.5s ease 0s;
    }
 
    &__textbox {
@@ -468,7 +462,6 @@ body {
 
    &:hover &__addbox {
       display: flex;
-      transition: display 1s ease 0.5s;
    }
 
    &__add {
@@ -487,7 +480,6 @@ body {
 
    &__add:hover {
       box-shadow: 0 0 10px #ffffff;
-      transition: all 0.5s ease 0s;
    }
 
    &__add-text {
@@ -565,3 +557,5 @@ body {
 @import "_catalog.scss";
 
 @import "_registration.scss";
+
+@import "_cart.scss";

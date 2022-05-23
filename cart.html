@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="https://kit.fontawesome.com/533455c231.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="css/style.css">
-   <title>Fashion Shop: Registration</title>
+   <title>Fashion Shop: Cart</title>
 </head>
 
 <body>
@@ -84,64 +84,81 @@
       <main class="main">
          <section class="main__apex apex main__apex_reg">
             <div class="apex__content container">
-               <h1 class="apex__title">REGISTRATION</h1>
+               <h1 class="apex__title">SHOPPING CART</h1>
             </div>
          </section>
 
-         <section class="main__introduction introduction">
-            <div class="introduction__content container">
-               <div class="introduction__login login">
-                  <form class="login__form" action="#">
-                     <fieldset>
-                        <label class="login__big-label" for="name">Your Name</label>
-                        <br>
-                        <input type="text" id="name" placeholder="First Name" autofocus required>
-                        <br>
-                        <input type="text" id="name" placeholder="Last Name" required>
-                     </fieldset>
+         <section class="main__basket basket">
+            <div class="basket__content container">
+               <div class="basket__left">
+                  <div class="basket__thingbox">
+                     <div class="basket__thing thing">
+                        <img class="thing__image" src="img/index/products/products-img-2.png" alt="MANGO PEOPLE SHIRT">
+                        <div class="thing__textbox">
+                           <h4 class="thing__title">MANGO PEOPLE SHIRT</h4>
+                           <ul class="thing__list">
+                              <li>Price: <span class="price">$300</span></li>
+                              <li>Color: <span class="gray">Red</span></li>
+                              <li>Size: <span class="gray">Xl</span></li>
+                              <li>
+                                 <form action="#">
+                                    <label for="cart-quantity">Quantity</label>
+                                    <input id="cart-quantity" type="number" required min="1" max="100">
+                                 </form>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="thing__delete">
+                           <i class="fa fa-solid fa-xmark"></i>
+                        </div>
+                     </div>
 
-                     <fieldset>
-                        <input type="radio" id="gender-male" name="gender" value="male">
-                        <label class="login__small-label" for="gender-male">Male</label>
-                        <input type="radio" id="gender-female" name="gender" value="female">
-                        <label class="login__small-label" for="gender-female">Female</label>
-                        <input type="radio" id="gender-other" name="gender" value="other">
-                        <label class="login__small-label" for="gender-other">Other</label>
-                     </fieldset>
-
-                     <fieldset>
-                        <label class="login__big-label" for="details">Login details</label>
-                        <br>
-                        <input type="email" id="details" placeholder="Email" required>
-                        <br>
-                        <input type="password" id="details" placeholder="Password" required>
-                     </fieldset>
-
-                     <p class="login__text">
-                        Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase
-                        letters
-                     </p>
-
-                     <button class="login__button button" type="submit">
-                        JOIN NOW <i class="fa fa-solid fa-arrow-right-long"></i>
-                     </button>
-                  </form>
+                     <div class="basket__thing thing">
+                        <img class="thing__image" src="img/index/products/products-img-4.png" alt="MANGO PEOPLE SHIRT">
+                        <div class="thing__textbox">
+                           <h4 class="thing__title">MANGO PEOPLE SHIRT</h4>
+                           <ul class="thing__list">
+                              <li>Price: <span class="price">$300</span></li>
+                              <li>Color: <span class="gray">Red</span></li>
+                              <li>Size: <span class="gray">Xl</span></li>
+                              <li>
+                                 <form action="#">
+                                    <label for="cart-quantity">Quantity</label>
+                                    <input id="cart-quantity" type="number" required min="1" max="100">
+                                 </form>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="thing__delete">
+                           <i class="fa fa-solid fa-xmark"></i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="basket__buttonbox">
+                     <a href="#" class="basket__button button">CLEAR SHOPPING CART</a>
+                     <a href="catalog.html" class="basket__button button">CONTINUE SHOPPING</a>
+                  </div>
                </div>
+               <div class="basket__right">
+                  <form class="basket__adress-form adress-form" action="#">
+                     <fieldset>
+                        <label class="adress-form__label" for="adress">SHIPPING ADRESS</label>
+                        <br>
+                        <input type="text" id="adress" placeholder="Country" autofocus required>
+                        <br>
+                        <input type="text" id="adress" placeholder="Sity" required>
+                        <br>
+                        <input type="text" id="adress" placeholder="Postcode/Zip" required>
+                     </fieldset>
+                     <button class="adress-form__button button" type="submit">GET A QUOTE</button>
+                  </form>
 
-               <div class="introduction__loyalty loyalty">
-                  <h2 class="loyalty__title">LOYALTY HAS ITS PERKS</h2>
-                  <p class="loyalty__text">
-                     Get in on the loyalty program where you can earn points and unlock serious perks. Starting with
-                     these as soon as you
-                     join:
-                  </p>
-                  <ul class="loyalty__list">
-                     <li>15% off welcome offer</li>
-                     <li> Free shipping, returns and exchanges on all orders </li>
-                     <li>$10 off a purchase on your birthday</li>
-                     <li>Early access to products</li>
-                     <li>Exclusive offers & rewards</li>
-                  </ul>
+                  <div class="basket__checkout">
+                     <p class="basket__sub-price">SUB TOTAL <span>$900</span></p>
+                     <p class="basket__grand-price">GRAND TOTAL <span>$900</span></p>
+                     <hr>
+                     <a href="#" class="basket__check-button button">PROCEED TO CHECKOUT</a>
+                  </div>
                </div>
             </div>
          </section>
