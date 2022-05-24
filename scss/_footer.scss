@@ -88,7 +88,8 @@
    }
 
    &__button:hover {
-      background: #e05c6e;
+      background: #d3374c;
+      color: #d1d1d1;
    }
 }
 
@@ -158,11 +159,26 @@
       justify-content: center;
       background: #ffffff;
       transition: all 0.5s ease-in-out 0s;
+      animation: footer-link 3s cubic-bezier(0.76, 0, 0.24, 1) 0.5s infinite normal both;
 
       .fa {
          font-size: 15px;
          color: #000000;
          transition: all 0.5s ease-in-out 0s;
+      }
+   }
+
+   @keyframes footer-link {
+      0% {
+         transform: scale(1);
+      }
+
+      50% {
+         transform: scale(1.1);
+      }
+
+      100% {
+         transform: scale(1);
       }
    }
 

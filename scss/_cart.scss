@@ -56,7 +56,8 @@
    }
 
    &__button:hover {
-      color: $site-color;
+      color: #ffffff;
+      background: $site-color;
       border-color: $site-color;
    }
 
@@ -308,4 +309,10 @@
          }
       }
    }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
 }
